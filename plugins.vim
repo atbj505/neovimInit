@@ -46,5 +46,6 @@ Plug 'tpope/vim-rsi'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'CodeFalling/fcitx-vim-osx'
 Plug 'airblade/vim-rooter'
+Plug 'tpope/vim-apathy'
 
 call plug#end()
