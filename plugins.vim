@@ -43,7 +43,7 @@ Plug 'prabirshrestha/asyncomplete-file.vim'
 Plug 'Shougo/neco-syntax'
 Plug 'prabirshrestha/asyncomplete-necosyntax.vim'
 Plug 'tpope/vim-rsi'
-Plug 'hiberabyss/smartim'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'CodeFalling/fcitx-vim-osx'
 
 call plug#end()

@@ -146,6 +146,7 @@ let g:ctrlp_match_window_reversed=0
 let g:ctrlp_mruf_max=500
 let g:ctrlp_follow_symlinks=1
 let g:ctrlp_funky_syntax_highlight = 1
+let g:ctrlp_funky_matchtype = 'path'
 let g:ctrlp_extensions = ['funky']
 " 替换grep为ag
 if executable('ag')
