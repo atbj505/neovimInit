@@ -45,5 +45,6 @@ Plug 'prabirshrestha/asyncomplete-necosyntax.vim'
 Plug 'tpope/vim-rsi'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'CodeFalling/fcitx-vim-osx'
+Plug 'airblade/vim-rooter'
 
 call plug#end()
