@@ -47,5 +47,6 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'CodeFalling/fcitx-vim-osx'
 Plug 'airblade/vim-rooter'
 Plug 'tpope/vim-apathy'
+Plug 'tpope/vim-sexp-mappings-for-regular-people'
 
 call plug#end()
