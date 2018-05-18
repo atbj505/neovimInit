@@ -90,6 +90,3 @@ vmap <Leader>a<Bar> :Tabularize /<Bar><CR>
 
 " JSON
 nmap <leader>jt <Esc>:%!python -m json.tool<CR><Esc>:set filetype=json<CR>
-
-" auto-pairs
-let g:AutoPairsShortcutBackInsert = "<M-i>"
