@@ -9,10 +9,10 @@ map <Up> <Nop>
 map <Down> <Nop>
 
 " Intend
-nnoremap < <<
-nnoremap > >>
-vnoremap < <gv
-vnoremap > >gv
+"nnoremap < <<
+"nnoremap > >>
+"vnoremap < <gv
+"vnoremap > >gv
 
 " window
 nnoremap <C-j> <C-w>j
@@ -90,3 +90,7 @@ vmap <Leader>a<Bar> :Tabularize /<Bar><CR>
 
 " JSON
 nmap <leader>jt <Esc>:%!python -m json.tool<CR><Esc>:set filetype=json<CR>
+
+" vim-easy-align
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)

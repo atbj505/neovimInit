@@ -48,5 +48,6 @@ Plug 'CodeFalling/fcitx-vim-osx'
 Plug 'airblade/vim-rooter'
 Plug 'tpope/vim-apathy'
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
+Plug 'junegunn/vim-easy-align'
 
 call plug#end()
