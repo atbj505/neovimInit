@@ -38,7 +38,8 @@ map gp :bp<CR>
 nnoremap gd :bp<cr>:bd #<cr>
 
 " NERDTree
-map <C-t> :NERDTreeToggle<CR>
+nnoremap <leader>nt :NERDTreeToggle<CR>
+nnoremap <leader>nf :NERDTreeFind<CR>
 
 " Asyncomplete
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
