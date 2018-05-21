@@ -32,6 +32,10 @@ nnoremap <Leader>pu :PlugUpdate<Cr>
 " yapf
 "autocmd FileType python nnoremap <leader>= :0,$!yapf<CR>
 
+" Split fast
+nnoremap <leader>\ :vs<CR>
+nnoremap <leader>- :sp<CR>
+
 " Vim-airline
 map gn :bn<CR>
 map gp :bp<CR>
