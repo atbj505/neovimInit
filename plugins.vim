@@ -51,5 +51,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'junegunn/vim-easy-align'
+Plug 'MattesGroeger/vim-bookmarks'
+Plug 'sbdchd/neoformat'
 
 call plug#end()

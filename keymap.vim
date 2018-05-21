@@ -30,7 +30,7 @@ nnoremap <Leader>pc :PlugClean<Cr>
 nnoremap <Leader>pu :PlugUpdate<Cr>
 
 " yapf
-autocmd FileType python nnoremap <leader>= :0,$!yapf<CR>
+"autocmd FileType python nnoremap <leader>= :0,$!yapf<CR>
 
 " Vim-airline
 map gn :bn<CR>
