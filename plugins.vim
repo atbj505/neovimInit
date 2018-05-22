@@ -53,5 +53,7 @@ Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'junegunn/vim-easy-align'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'sbdchd/neoformat'
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 
 call plug#end()

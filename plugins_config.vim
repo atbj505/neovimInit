@@ -186,3 +186,6 @@ augroup fmt
   autocmd!
   autocmd BufWritePre * undojoin | Neoformat
 augroup END
+
+" fzf
+set rtp+=/usr/local/opt/fzf

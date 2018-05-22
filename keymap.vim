@@ -67,9 +67,9 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 autocmd FileType python nnoremap <leader>is :!isort %<CR><CR>
 
 " ctrlp
-let g:ctrlp_map = '<leader>p'
+let g:ctrlp_map = '<leader>cp'
 let g:ctrlp_cmd = 'CtrlP'
-map <leader>f :CtrlPMRU<CR>
+map <leader>cf :CtrlPMRU<CR>
 
 " ctrlp-funky
 nnoremap <Leader>fu :CtrlPFunky<Cr>
@@ -99,3 +99,13 @@ nmap <leader>jt <Esc>:%!python -m json.tool<CR><Esc>:set filetype=json<CR>
 " vim-easy-align
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
+
+" fzf
+nnoremap <silent> <Leader>ff :Files<CR>
+nnoremap <silent> <Leader>fb :Buffers<CR>
+command! -bang -nargs=* Ag
+  \ call fzf#vim#ag(<q-args>,
+  \                 <bang>0 ? fzf#vim#with_preview('up:60%')
+  \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \                 <bang>0)
+nnoremap <silent> <Leader>fa :Ag<CR>
