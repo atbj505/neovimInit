@@ -104,19 +104,19 @@ au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#source
 let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
 
 " python-mode
-let g:pymode_lint = 0
-let g:pymode_python = 'python3'
-let g:pymode_trim_whitespaces = 0
-let g:pymode_options = 0
-let g:pymode_rope = 0
-let g:pymode_doc = 1
-let g:pymode_doc_bind = 'K'
-let g:pymode_syntax = 1
-let g:pymode_syntax_all = 1
-let g:pymode_syntax_print_as_function = 0
-let g:pymode_syntax_highlight_self = g:pymode_syntax_all
-let g:pymode_motion = 1
-let g:pymode_breakpoint = 1
+"let g:pymode_lint = 0
+"let g:pymode_python = 'python3'
+"let g:pymode_trim_whitespaces = 0
+"let g:pymode_options = 0
+"let g:pymode_rope = 0
+"let g:pymode_doc = 1
+"let g:pymode_doc_bind = 'K'
+"let g:pymode_syntax = 1
+"let g:pymode_syntax_all = 1
+"let g:pymode_syntax_print_as_function = 0
+"let g:pymode_syntax_highlight_self = g:pymode_syntax_all
+"let g:pymode_motion = 1
+"let g:pymode_breakpoint = 1
 
 " ale
 let g:ale_sign_column_always = 1
