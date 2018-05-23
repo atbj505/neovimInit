@@ -54,5 +54,6 @@ Plug 'MattesGroeger/vim-bookmarks'
 Plug 'sbdchd/neoformat'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'davidhalter/jedi-vim'
 
 call plug#end()

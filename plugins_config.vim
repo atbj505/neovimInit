@@ -189,3 +189,6 @@ augroup END
 
 " fzf
 set rtp+=/usr/local/opt/fzf
+
+" jedi
+let g:jedi#completions_enabled = 0
