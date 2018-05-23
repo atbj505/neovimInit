@@ -1,7 +1,5 @@
 "去掉搜索高亮
 noremap <silent><leader>/ :nohls<CR>
-"代码折叠
-nnoremap <space> za
 
 map <Left> <Nop>
 map <Right> <Nop>
