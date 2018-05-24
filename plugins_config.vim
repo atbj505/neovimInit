@@ -192,3 +192,7 @@ set rtp+=/usr/local/opt/fzf
 
 " jedi
 let g:jedi#completions_enabled = 0
+
+" scratch
+let g:scratch_autohide = 1
+let g:scratch_insert_autohide = 1

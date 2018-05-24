@@ -55,5 +55,6 @@ Plug 'sbdchd/neoformat'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'davidhalter/jedi-vim'
+Plug 'mtth/scratch.vim'
 
 call plug#end()
