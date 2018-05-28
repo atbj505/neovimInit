@@ -6,18 +6,6 @@ map <Right> <Nop>
 map <Up> <Nop>
 map <Down> <Nop>
 
-" Intend
-"nnoremap < <<
-"nnoremap > >>
-"vnoremap < <gv
-"vnoremap > >gv
-
-" window
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-h> <C-w>h
-nnoremap <C-l> <C-w>l
-
 " command
 cnoremap <C-k> <Up>
 cnoremap <C-j> <Down>
