@@ -56,5 +56,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'davidhalter/jedi-vim'
 Plug 'mtth/scratch.vim'
 Plug 'Glench/Vim-Jinja2-Syntax'
+Plug 'jeetsukumaran/vim-pythonsense'
+Plug 't9md/vim-choosewin'
 
 call plug#end()

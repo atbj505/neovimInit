@@ -95,3 +95,6 @@ command! -bang -nargs=* Ag
   \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
   \                 <bang>0)
 nnoremap <silent> <Leader>fa :Ag<CR>
+
+" vim-choosewin
+nmap - <Plug>(choosewin)

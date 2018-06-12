@@ -196,3 +196,7 @@ let g:jedi#completions_enabled = 0
 " scratch
 let g:scratch_autohide = 1
 let g:scratch_insert_autohide = 1
+
+" vim-choosewin
+let g:choosewin_label = '123456789'
+let g:choosewin_tablabel = ''
