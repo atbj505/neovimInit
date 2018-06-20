@@ -1,3 +1,5 @@
+runtime custom_function.vim
+
 "去掉搜索高亮
 noremap <silent><leader>/ :nohls<CR>
 
@@ -98,3 +100,6 @@ nnoremap <silent> <Leader>fa :Ag<CR>
 
 " vim-choosewin
 nmap - <Plug>(choosewin)
+
+" run python
+autocmd FileType python map <C-r> :call PYTHON()<CR>
