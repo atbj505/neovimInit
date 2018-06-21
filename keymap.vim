@@ -1,7 +1,10 @@
 runtime custom_function.vim
 
-"去掉搜索高亮
+" 去掉搜索高亮
 noremap <silent><leader>/ :nohls<CR>
+
+" terminal
+nnoremap <Leader>ot :call OpenTerminal()<Cr>
 
 map <Left> <Nop>
 map <Right> <Nop>
@@ -100,6 +103,3 @@ nnoremap <silent> <Leader>fa :Ag<CR>
 
 " vim-choosewin
 nmap - <Plug>(choosewin)
-
-" run python
-autocmd FileType python map <C-r> :call PYTHON()<CR>
