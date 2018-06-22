@@ -58,5 +58,6 @@ Plug 'mtth/scratch.vim'
 Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'jeetsukumaran/vim-pythonsense'
 Plug 't9md/vim-choosewin'
+Plug 'vimwiki/vimwiki'
 
 call plug#end()

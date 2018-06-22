@@ -12,6 +12,9 @@ set noerrorbells
 set ffs=unix,dos,mac
 set encoding=utf8
 set nofoldenable
+set nocompatible
+filetype plugin on
+syntax on
 
 " JSON
 let g:vim_json_syntax_conceal = 0
