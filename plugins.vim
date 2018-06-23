@@ -59,5 +59,7 @@ Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'jeetsukumaran/vim-pythonsense'
 Plug 't9md/vim-choosewin'
 Plug 'vimwiki/vimwiki'
+Plug 'tbabej/taskwiki'
+Plug 'powerman/vim-plugin-AnsiEsc'
 
 call plug#end()
