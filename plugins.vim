@@ -61,5 +61,6 @@ Plug 't9md/vim-choosewin'
 Plug 'vimwiki/vimwiki'
 Plug 'tbabej/taskwiki'
 Plug 'powerman/vim-plugin-AnsiEsc'
+Plug 'mklabs/split-term.vim'
 
 call plug#end()

@@ -4,7 +4,7 @@ runtime custom_function.vim
 noremap <silent><leader>/ :nohls<CR>
 
 " terminal
-nnoremap <Leader>ot :call OpenTerminal()<Cr>
+"nnoremap <Leader>ot :call OpenTerminal()<Cr>
 
 map <Left> <Nop>
 map <Right> <Nop>
