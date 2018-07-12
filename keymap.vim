@@ -103,3 +103,6 @@ nnoremap <silent> <Leader>fa :Ag<CR>
 
 " vim-choosewin
 nmap - <Plug>(choosewin)
+
+" Term
+nnoremap <Leader>ot :10Term<Cr>
