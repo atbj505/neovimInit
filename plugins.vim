@@ -62,5 +62,6 @@ Plug 'vimwiki/vimwiki'
 Plug 'tbabej/taskwiki'
 Plug 'powerman/vim-plugin-AnsiEsc'
 Plug 'mklabs/split-term.vim'
+Plug 'cocopon/vaffle.vim'
 
 call plug#end()
