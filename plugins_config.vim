@@ -130,6 +130,13 @@ let g:ale_python_flake8_executable = 'python3'
 let g:ale_python_flake8_options = '-m flake8'
 let g:ale_python_flake8_use_global = 1
 let g:ale_linters = {'python': ['flake8']}
+"let g:ale_fix_on_save = 1
+"let g:ale_fixers = [
+"\   'remove_trailing_lines',
+"\   'isort',
+"\   'ale#fixers#generic_python#BreakUpLongLines',
+"\   'yapf',
+"\]
 
 " indentLine
 let g:indentLine_char='┆'
@@ -182,12 +189,6 @@ if !isdirectory(s:vim_tags)
    silent! call mkdir(s:vim_tags, 'p')
 endif
 
-" neoformat
-augroup fmt
-  autocmd!
-  autocmd BufWritePre * undojoin | Neoformat
-augroup END
-
 " fzf
 set rtp+=/usr/local/opt/fzf
 
@@ -201,3 +202,6 @@ let g:scratch_insert_autohide = 1
 " vim-choosewin
 let g:choosewin_label = '123456789'
 let g:choosewin_tablabel = ''
+
+" black
+autocmd BufWritePre *.py execute ':Black'
