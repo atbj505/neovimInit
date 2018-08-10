@@ -49,75 +49,60 @@ let g:NERDTreeIndicatorMapCustom = {
     \ }
 
 " asyncomplete
-let g:asyncomplete_auto_popup = 1
-let g:asyncomplete_remove_duplicates = 1
-set completeopt+=preview
-autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
-if executable('pyls')
-    " pip install python-language-server
-    au User lsp_setup call lsp#register_server({
-        \ 'name': 'pyls',
-        \ 'cmd': {server_info->['pyls']},
-        \ 'whitelist': ['python'],
-        \ })
-endif
+"let g:asyncomplete_auto_popup = 1
+"let g:asyncomplete_remove_duplicates = 1
+"set completeopt+=preview
+"autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+"if executable('pyls')
+    "" pip install python-language-server
+    "au User lsp_setup call lsp#register_server({
+        "\ 'name': 'pyls',
+        "\ 'cmd': {server_info->['pyls']},
+        "\ 'whitelist': ['python'],
+        "\ })
+"endif
 
-if has('python3')
-    let g:UltiSnipsUsePythonVersion=3
-    let g:UltiSnipsEditSplit='vertical'
-    call asyncomplete#register_source(asyncomplete#sources#ultisnips#get_source_options({
-        \ 'name': 'ultisnips',
-        \ 'whitelist': ['*'],
-        \ 'completor': function('asyncomplete#sources#ultisnips#completor'),
-        \ }))
-endif
+"if has('python3')
+    "let g:UltiSnipsUsePythonVersion=3
+    "let g:UltiSnipsEditSplit='vertical'
+    "call asyncomplete#register_source(asyncomplete#sources#ultisnips#get_source_options({
+        "\ 'name': 'ultisnips',
+        "\ 'whitelist': ['*'],
+        "\ 'completor': function('asyncomplete#sources#ultisnips#completor'),
+        "\ }))
+"endif
 
-au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#tags#get_source_options({
-    \ 'name': 'tags',
-    \ 'whitelist': ['c'],
-    \ 'completor': function('asyncomplete#sources#tags#completor'),
-    \ 'config': {
-    \    'max_file_size': 50000000,
-    \  },
-    \ }))
+"au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#tags#get_source_options({
+    "\ 'name': 'tags',
+    "\ 'whitelist': ['c'],
+    "\ 'completor': function('asyncomplete#sources#tags#completor'),
+    "\ 'config': {
+    "\    'max_file_size': 50000000,
+    "\  },
+    "\ }))
 
-call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options({
-    \ 'name': 'buffer',
-    \ 'whitelist': ['*'],
-    \ 'blacklist': ['go'],
-    \ 'completor': function('asyncomplete#sources#buffer#completor'),
-    \ }))
+"call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options({
+    "\ 'name': 'buffer',
+    "\ 'whitelist': ['*'],
+    "\ 'blacklist': ['go'],
+    "\ 'completor': function('asyncomplete#sources#buffer#completor'),
+    "\ }))
 
-au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#file#get_source_options({
-    \ 'name': 'file',
-    \ 'whitelist': ['*'],
-    \ 'priority': 10,
-    \ 'completor': function('asyncomplete#sources#file#completor')
-    \ }))
+"au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#file#get_source_options({
+    "\ 'name': 'file',
+    "\ 'whitelist': ['*'],
+    "\ 'priority': 10,
+    "\ 'completor': function('asyncomplete#sources#file#completor')
+    "\ }))
 
-au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#necosyntax#get_source_options({
-    \ 'name': 'necosyntax',
-    \ 'whitelist': ['*'],
-    \ 'completor': function('asyncomplete#sources#necosyntax#completor'),
-    \ }))
+"au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#necosyntax#get_source_options({
+    "\ 'name': 'necosyntax',
+    "\ 'whitelist': ['*'],
+    "\ 'completor': function('asyncomplete#sources#necosyntax#completor'),
+    "\ }))
 
 " tagbar
 let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
-
-" python-mode
-"let g:pymode_lint = 0
-"let g:pymode_python = 'python3'
-"let g:pymode_trim_whitespaces = 0
-"let g:pymode_options = 0
-"let g:pymode_rope = 0
-"let g:pymode_doc = 1
-"let g:pymode_doc_bind = 'K'
-"let g:pymode_syntax = 1
-"let g:pymode_syntax_all = 1
-"let g:pymode_syntax_print_as_function = 0
-"let g:pymode_syntax_highlight_self = g:pymode_syntax_all
-"let g:pymode_motion = 1
-"let g:pymode_breakpoint = 1
 
 " ale
 let g:ale_sign_column_always = 1
@@ -205,3 +190,10 @@ let g:choosewin_tablabel = ''
 
 " black
 autocmd BufWritePre *.py execute ':Black'
+
+" deoplete
+let g:deoplete#auto_complete_start_length = 1
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_smart_case = 1
+imap <expr><TAB> pumvisible() ? "\<C-n>" : (neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>")
+imap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
