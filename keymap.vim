@@ -106,3 +106,10 @@ nmap - <Plug>(choosewin)
 
 " Term
 nnoremap <Leader>ot :10Term<Cr>
+
+" deoplete
+imap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+imap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
+
+" undotree
+nnoremap <Leader>ut :UndotreeToggle<cr>

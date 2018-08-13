@@ -103,6 +103,8 @@ let g:NERDTreeIndicatorMapCustom = {
 
 " tagbar
 let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
+let g:tagbar_autofocus = 1
+let g:tagbar_sort = 0
 
 " ale
 let g:ale_sign_column_always = 1
@@ -195,5 +197,6 @@ autocmd BufWritePre *.py execute ':Black'
 let g:deoplete#auto_complete_start_length = 1
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_smart_case = 1
-imap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-imap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
+
+" undoTree
+let g:undotree_SetFocusWhenToggle = 1
