@@ -58,5 +58,6 @@ Plug 'ambv/black'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi', { 'for': 'python' }
 Plug 'mbbill/undotree'
+Plug 'sebastianmarkow/deoplete-rust', { 'for': 'rust' }
 
 call plug#end()
