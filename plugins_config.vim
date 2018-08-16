@@ -116,15 +116,12 @@ let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:ale_python_flake8_executable = 'python3'
 let g:ale_python_flake8_options = '-m flake8'
 let g:ale_python_flake8_use_global = 1
-let g:ale_linters = {'python': ['flake8'], 'rust': ['rustc']}
-let g:ale_rust_rustc_options = '--emit metadata'
-"let g:ale_fix_on_save = 1
-"let g:ale_fixers = [
-"\   'remove_trailing_lines',
-"\   'isort',
-"\   'ale#fixers#generic_python#BreakUpLongLines',
-"\   'yapf',
-"\]
+let g:ale_linters = {'python': ['flake8'], 'rust': ['cargo']}
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'rust': ['rustfmt'],
+\}
 
 " indentLine
 let g:indentLine_char='┆'
