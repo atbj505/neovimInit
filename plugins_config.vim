@@ -195,6 +195,8 @@ autocmd BufWritePre *.py execute ':Black'
 let g:deoplete#auto_complete_start_length = 1
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_smart_case = 1
+let g:deoplete#sources#rust#racer_binary='/Users/yangqihui/.cargo/bin/racer'
+let g:deoplete#sources#rust#rust_source_path='/Users/yangqihui/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src'
 
 " undoTree
 let g:undotree_SetFocusWhenToggle = 1
