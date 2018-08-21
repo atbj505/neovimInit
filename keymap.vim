@@ -115,4 +115,4 @@ imap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
 nnoremap <Leader>ut :UndotreeToggle<cr>
 
 "rustfmt
-autocmd FileType rust nnoremap <leader>= :RustFmt<CR>
+autocmd FileType rust nnoremap <leader>= <ESC>:!cargo +nightly fmt<CR><ESC>
