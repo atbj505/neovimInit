@@ -31,14 +31,11 @@ Plug 'vim-scripts/matchit.zip'
 Plug 'Yggdroot/indentLine'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'Shougo/neco-syntax'
-Plug 'tpope/vim-rsi'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'airblade/vim-rooter'
 Plug 'tpope/vim-apathy'
-Plug 'guns/vim-sexp'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'junegunn/vim-easy-align'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug '/usr/local/opt/fzf'
@@ -59,5 +56,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi', { 'for': 'python' }
 Plug 'mbbill/undotree'
 Plug 'sebastianmarkow/deoplete-rust', { 'for': 'rust' }
+Plug 'matze/vim-move'
+Plug 'tpope/vim-rsi'
 
 call plug#end()
