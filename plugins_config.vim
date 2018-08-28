@@ -103,7 +103,7 @@ let g:NERDTreeIndicatorMapCustom = {
 
 " tagbar
 let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
-let g:tagbar_autofocus = 1
+"let g:tagbar_autofocus = 1
 let g:tagbar_sort = 0
 
 " ale
