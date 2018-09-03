@@ -201,3 +201,6 @@ let g:deoplete#sources#rust#rust_source_path='/Users/yangqihui/.rustup/toolchain
 
 " undoTree
 let g:undotree_SetFocusWhenToggle = 1
+
+" rsi
+let g:rsi_no_meta = 1

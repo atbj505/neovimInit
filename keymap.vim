@@ -10,6 +10,8 @@ map <Left> <Nop>
 map <Right> <Nop>
 map <Up> <Nop>
 map <Down> <Nop>
+inoremap <M-n> <Down>
+inoremap <M-p> <Up>
 
 " command
 cnoremap <C-k> <Up>
