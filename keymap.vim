@@ -116,5 +116,14 @@ imap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
 " undotree
 nnoremap <Leader>ut :UndotreeToggle<cr>
 
-"rustfmt
+" rustfmt
 autocmd FileType rust nnoremap <leader>= <ESC>:!cargo +nightly fmt<CR><ESC>
+
+" vimux
+map <Leader>vp :VimuxPromptCommand<CR>
+map <Leader>vl :VimuxRunLastCommand<CR>
+" vimux-cargo
+map <Leader>rc :wa<CR> :CargoRun<CR>
+map <Leader>ra :wa<CR> :CargoTestAll<CR>
+map <Leader>rb :wa<CR> :CargoUnitTestCurrentFile<CR>
+map <Leader>rf :wa<CR> :CargoUnitTestFocused<CR>

@@ -58,5 +58,7 @@ Plug 'mbbill/undotree'
 Plug 'sebastianmarkow/deoplete-rust', { 'for': 'rust' }
 Plug 'matze/vim-move'
 Plug 'tpope/vim-rsi'
+Plug 'benmills/vimux'
+Plug 'jtdowney/vimux-cargo'
 
 call plug#end()
