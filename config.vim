@@ -93,4 +93,3 @@ function HeaderBash()
     normal o
 endf
 autocmd bufnewfile *.sh call HeaderBash()
-
