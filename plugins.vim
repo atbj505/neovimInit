@@ -61,5 +61,6 @@ Plug 'tpope/vim-rsi'
 Plug 'benmills/vimux'
 Plug 'jtdowney/vimux-cargo'
 Plug '907th/vim-auto-save'
+Plug 'lfv89/vim-interestingwords'
 
 call plug#end()
