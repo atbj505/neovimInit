@@ -53,6 +53,9 @@ Plug 'cocopon/vaffle.vim'
 Plug 'andymass/vim-tradewinds'
 Plug 'ambv/black'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/neopairs.vim'
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
 Plug 'zchee/deoplete-jedi', { 'for': 'python' }
 Plug 'mbbill/undotree'
 Plug 'sebastianmarkow/deoplete-rust', { 'for': 'rust' }
