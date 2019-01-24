@@ -35,6 +35,7 @@ set tags=./tags;.tags
 set nu
 set ai
 set smartindent
+set autoindent
 set nowrap
 set scrolloff=5
 set completeopt-=preview
