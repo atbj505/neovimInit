@@ -116,8 +116,9 @@ let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:ale_python_flake8_executable = 'python3'
 let g:ale_python_flake8_options = '-m flake8'
 let g:ale_python_flake8_use_global = 1
-let g:ale_linters = {'python': ['flake8'], 'rust': ['cargo', 'rustc']}
+let g:ale_linters = {'python': ['flake8'], 'rust': ['cargo', 'rustc'], 'go': ['gometalinter']}
 let g:ale_rust_rustc_options = '--emit metadata'
+let g:ale_go_gometalinter_options = '--fast --enable=staticcheck --enable=gosimple --enable=unused'
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
@@ -200,6 +201,9 @@ let g:neopairs#enable = 1
 let g:deoplete#enable_smart_case = 1
 let g:deoplete#sources#rust#racer_binary='/Users/yangqihui/.cargo/bin/racer'
 let g:deoplete#sources#rust#rust_source_path='/Users/yangqihui/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src'
+let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
+let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+
 call deoplete#custom#source('_', 'converters', ['converter_auto_paren'])
 
 " undoTree

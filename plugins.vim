@@ -53,6 +53,7 @@ Plug 'cocopon/vaffle.vim'
 Plug 'andymass/vim-tradewinds'
 Plug 'ambv/black'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
 Plug 'Shougo/neopairs.vim'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
