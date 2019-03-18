@@ -12,9 +12,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'Raimondi/delimitMate'
 Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
-Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'jistr/vim-nerdtree-tabs', { 'on': 'NERDTreeToggle' }
+Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'godlygeek/tabular'
 Plug 'majutsushi/tagbar'
@@ -26,10 +26,8 @@ Plug 'honza/vim-snippets'
 Plug 'mattn/emmet-vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'yonchu/accelerated-smooth-scroll'
-Plug 'ap/vim-css-color'
 Plug 'vim-scripts/matchit.zip'
 Plug 'Yggdroot/indentLine'
-Plug 'ludovicchabant/vim-gutentags'
 Plug 'Shougo/neco-syntax'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'airblade/vim-rooter'
@@ -53,7 +51,7 @@ Plug 'cocopon/vaffle.vim'
 Plug 'andymass/vim-tradewinds'
 Plug 'ambv/black'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
+Plug 'deoplete-plugins/deoplete-go', { 'do': 'make', 'for': 'go'}
 Plug 'Shougo/neopairs.vim'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
@@ -64,7 +62,9 @@ Plug 'matze/vim-move'
 Plug 'tpope/vim-rsi'
 Plug 'benmills/vimux'
 Plug 'jtdowney/vimux-cargo'
+Plug 'benmills/vimux-golang'
 Plug '907th/vim-auto-save'
 Plug 'lfv89/vim-interestingwords'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 call plug#end()
