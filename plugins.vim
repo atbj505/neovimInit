@@ -51,13 +51,13 @@ Plug 'cocopon/vaffle.vim'
 Plug 'andymass/vim-tradewinds'
 Plug 'ambv/black'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'deoplete-plugins/deoplete-go', { 'do': 'make', 'for': 'go'}
+Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
 Plug 'Shougo/neopairs.vim'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
-Plug 'zchee/deoplete-jedi', { 'for': 'python' }
+Plug 'zchee/deoplete-jedi'
 Plug 'mbbill/undotree'
-Plug 'sebastianmarkow/deoplete-rust', { 'for': 'rust' }
+Plug 'sebastianmarkow/deoplete-rust'
 Plug 'matze/vim-move'
 Plug 'tpope/vim-rsi'
 Plug 'benmills/vimux'

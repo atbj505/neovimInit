@@ -193,6 +193,7 @@ let g:choosewin_tablabel = ''
 
 " black
 autocmd BufWritePre *.py execute ':Black'
+let g:black_virtualenv = '/usr/local/var/pyenv/shims'
 
 " deoplete
 let g:deoplete#auto_complete_start_length = 1
@@ -214,4 +215,4 @@ let g:rsi_no_meta = 1
 
 " vim-auto-save
 let g:auto_save = 1
-let g:auto_save_events = ["InsertLeave", "TextChanged"]
+let g:auto_save_events = ["InsertLeave"]
