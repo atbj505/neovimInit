@@ -13,14 +13,15 @@ set ffs=unix,dos,mac
 set encoding=utf8
 set nofoldenable
 set nocompatible
+set timeoutlen=500
 filetype plugin on
 
 " JSON
 let g:vim_json_syntax_conceal = 0
 
 " Map Leader
-let mapleader = " "
-let g:mapleader = " "
+let mapleader = "\<Space>"
+let g:mapleader = "\<Space>"
 
 set autoread
 set ignorecase

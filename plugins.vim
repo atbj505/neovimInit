@@ -66,5 +66,6 @@ Plug 'benmills/vimux-golang'
 Plug '907th/vim-auto-save'
 Plug 'lfv89/vim-interestingwords'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'liuchengxu/vim-which-key'
 
 call plug#end()

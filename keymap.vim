@@ -1,5 +1,8 @@
 runtime custom_function.vim
 
+nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
+nnoremap <silent> <localleader> :<c-u>WhichKey  '<Space>'<CR>
+
 " 去掉搜索高亮
 noremap <silent><leader>/ :nohls<CR>
 
