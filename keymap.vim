@@ -125,9 +125,6 @@ xmap <C-k>     <Plug>(neosnippet_expand_target)
 " undotree
 nnoremap <Leader>ut :UndotreeToggle<cr>
 
-" rustfmt
-autocmd FileType rust nnoremap <leader>= <ESC>:!cargo +nightly fmt<CR><ESC>
-
 " vimux
 map <Leader>vp :VimuxPromptCommand<CR>
 map <Leader>vl :VimuxRunLastCommand<CR>

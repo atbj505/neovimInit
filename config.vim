@@ -77,6 +77,7 @@ endif
 " 自动保存
 au FocusLost * silent! up " vim 窗口失去焦点时保存
 au BufLeave * silent! up " vim buffer 切换时自动保存
+autocmd BufWritePre *.rs execute ':!cargo +nightly fmt'
 
 " Auto add head info
 " .py file into add header
