@@ -113,14 +113,14 @@ nmap - <Plug>(choosewin)
 nnoremap <Leader>ot :10Term<Cr>
 
 " deoplete
-imap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-imap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
-"imap <expr><TAB> pumvisible() ? "\<C-n>" : (neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>")
+"imap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 "imap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
+imap <expr><TAB> pumvisible() ? "\<C-n>" : (neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>")
+imap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
 imap <expr><CR> pumvisible() ? deoplete#close_popup() : "\<CR>"
-imap <C-,>     <Plug>(neosnippet_expand_or_jump)
-smap <C-,>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-,>     <Plug>(neosnippet_expand_target)
+imap <C-j>     <Plug>(neosnippet_expand_or_jump)
+smap <C-j>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-j>     <Plug>(neosnippet_expand_target)
 
 " undotree
 nnoremap <Leader>ut :UndotreeToggle<cr>
