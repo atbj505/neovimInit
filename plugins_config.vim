@@ -217,3 +217,6 @@ let g:rsi_no_meta = 1
 " vim-auto-save
 let g:auto_save = 1
 let g:auto_save_events = ["InsertLeave"]
+
+" vimwiki
+let g:vimwiki_list = [{'path': '/Volumes/Transcend/vimwiki/'}]
