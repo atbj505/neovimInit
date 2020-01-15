@@ -45,6 +45,13 @@ set tabstop=4
 set shiftwidth=4
 set fileformat=unix
 
+set hidden
+set nowritebackup
+set cmdheight=2
+set updatetime=300
+set shortmess+=c
+set signcolumn=yes
+
 " share system clipboard
 if has('clipboard')
         if has('unnamedplus')  " When possible use + register for copy-paste
@@ -67,27 +74,6 @@ func! DeleteTrailingWS()
   exe "normal `z"
 endfunc
 autocmd BufWrite * :call DeleteTrailingWS()
-
-if exists("$VIRTUAL_ENV")
-    let g:python3_host_prog=substitute(system("which -a python3 | head -n2 | tail -n1"), "\n", '', 'g')
-else
-    let g:python3_host_prog=substitute(system("which python3"), "\n", '', 'g')
-endif
-
-" 自动保存
-"au FocusLost * silent! up " vim 窗口失去焦点时保存
-"au BufLeave * silent! up " vim buffer 切换时自动保存
-"autocmd BufWritePre *.rs execute ':!cargo +nightly fmt'
-
-" Auto add head info
-" .py file into add header
-function HeaderPython()
-    call setline(1, "#!/usr/bin/env python")
-    call append(1, "# -*- coding: utf-8 -*-")
-    normal G
-    normal o
-endf
-autocmd bufnewfile *.py call HeaderPython()
 
 " .sh file
 function HeaderBash()
