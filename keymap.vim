@@ -54,9 +54,11 @@ nmap - <Plug>(choosewin)
 nmap <silent> <Leader>df :Defx -columns=icons:indent:filename:type <cr>
 autocmd FileType defx call s:defx_mappings()
 function! s:defx_mappings() abort
-  nnoremap <silent><buffer><expr> o     <SID>defx_toggle_tree()                    " 打开或者关闭文件夹，文件
-  nnoremap <silent><buffer><expr> .     defx#do_action('toggle_ignored_files')     " 显示隐藏文件
-  nnoremap <silent><buffer><expr> <C-r>  defx#do_action('redraw')
+    nnoremap <silent><buffer><expr> o     <SID>defx_toggle_tree()                    " 打开或者关闭文件夹，文件
+    nnoremap <silent><buffer><expr> .     defx#do_action('toggle_ignored_files')     " 显示隐藏文件
+    nnoremap <silent><buffer><expr> <C-r>  defx#do_action('redraw')
+    nnoremap <silent><buffer><expr> F defx#do_action('new_file')
+    nnoremap <silent><buffer><expr> D defx#do_action('new_directory')
 endfunction
 
 function! s:defx_toggle_tree() abort
