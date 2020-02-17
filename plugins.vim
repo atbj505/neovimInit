@@ -33,6 +33,7 @@ Plug 'benmills/vimux-golang'
 Plug '907th/vim-auto-save'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'liuchengxu/vim-which-key'
+Plug 'honza/vim-snippets'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'ctrlpvim/ctrlp.vim'
