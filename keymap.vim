@@ -32,7 +32,7 @@ nnoremap <leader>- :sp<CR>
 " Vim-airline
 map gn :bn<CR>
 map gp :bp<CR>
-nnoremap gc :bp<cr>:bd #<cr>
+nnoremap gs :bp<cr>:bd #<cr>
 
 " Ale
 nmap <Leader>s :ALEToggle<CR>
@@ -182,21 +182,25 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Using CocList
 " Show all diagnostics
-nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+nnoremap <silent> <space>ca  :<C-u>CocList diagnostics<cr>
 " Manage extensions
-nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
+nnoremap <silent> <space>ce  :<C-u>CocList extensions<cr>
 " Show commands
-nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
+nnoremap <silent> <space>cc  :<C-u>CocList commands<cr>
 " Find symbol of current document
-nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
+nnoremap <silent> <space>co  :<C-u>CocList outline<cr>
 " Search workspace symbols
-nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
+nnoremap <silent> <space>cs  :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
-nnoremap <silent> <space>j  :<C-u>CocNext<CR>
+nnoremap <silent> <space>cj  :<C-u>CocNext<CR>
 " Do default action for previous item.
-nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
+nnoremap <silent> <space>ck  :<C-u>CocPrev<CR>
 " Resume latest coc list
-nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+nnoremap <silent> <space>cp  :<C-u>CocListResume<CR>
+
+nnoremap <silent> <space>cf  :<C-u>CocList files<cr>
+
+nnoremap <silent> <space>cb  :<C-u>CocList buffers<cr>
 
 " Use <C-l> for trigger snippet expand.
 imap <C-l> <Plug>(coc-snippets-expand)
@@ -213,21 +217,14 @@ let g:coc_snippet_prev = '<c-k>'
 " Use <C-j> for both expand and jump (make expand higher priority.)
 imap <C-j> <Plug>(coc-snippets-expand-jump)
 
-" ctrlp
-let g:ctrlp_map = '<leader>cp'
-let g:ctrlp_cmd = 'CtrlP'
-map <leader>cf :CtrlPMRU<CR>
+" grep word under cursor
+command! -nargs=+ -complete=custom,s:GrepArgs Rg exe 'CocList grep '.<q-args>
 
-" ctrlp-funky
-nnoremap <Leader>fu :CtrlPFunky<Cr>
-nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
+function! s:GrepArgs(...)
+  let list = ['-S', '-smartcase', '-i', '-ignorecase', '-w', '-word',
+        \ '-e', '-regex', '-u', '-skip-vcs-ignores', '-t', '-extension']
+  return join(list, "\n")
+endfunction
 
-" fzf
-nnoremap <silent> <Leader>ff :Files<CR>
-nnoremap <silent> <Leader>fb :Buffers<CR>
-command! -bang -nargs=* Ag
-  \ call fzf#vim#ag(<q-args>,
-  \                 <bang>0 ? fzf#vim#with_preview('up:60%')
-  \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
-  \                 <bang>0)
-nnoremap <silent> <Leader>fa :Ag<CR>
+" Keymapping for grep word under cursor with interactive mode
+nnoremap <silent> <Leader>cu :exe 'CocList -I --input='.expand('<cword>').' grep'<CR>

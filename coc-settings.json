@@ -14,5 +14,6 @@
             "usePlaceholders": true
           }
         }
-    }
+    },
+    "list.source.grep.command": "Ag"
 }

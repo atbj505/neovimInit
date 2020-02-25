@@ -15,6 +15,7 @@ set nofoldenable
 set nocompatible
 set timeoutlen=500
 filetype plugin on
+autocmd FileType apache setlocal commentstring=#\ %s
 
 " JSON
 let g:vim_json_syntax_conceal = 0

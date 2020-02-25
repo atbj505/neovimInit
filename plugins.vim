@@ -13,7 +13,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'kristijanhusak/defx-icons'
 Plug 'kristijanhusak/defx-git'
-Plug 'scrooloose/nerdcommenter'
 Plug 'w0rp/ale'
 Plug 'Raimondi/delimitMate'
 Plug 'easymotion/vim-easymotion'
@@ -35,9 +34,6 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'liuchengxu/vim-which-key'
 Plug 'honza/vim-snippets'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'tpope/vim-commentary'
 
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'tacahiroy/ctrlp-funky'
-Plug '/usr/local/opt/fzf'
-Plug 'junegunn/fzf.vim'
 call plug#end()

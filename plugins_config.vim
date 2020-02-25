@@ -29,6 +29,11 @@ call defx#custom#option('_', {
       \ 'toggle': 1,
       \ 'resume': 1
       \ })
+
+call defx#custom#column('indent', {
+      \ 'indent': '-'
+      \ })
+
 let g:defx_icons_enable_syntax_highlight = 1
 let g:defx_icons_column_length = 2
 let g:defx_icons_directory_icon = ''
@@ -40,6 +45,7 @@ let g:defx_icons_directory_symlink_icon = ''
 let g:defx_icons_root_opened_tree_icon = ''
 let g:defx_icons_nested_opened_tree_icon = ''
 let g:defx_icons_nested_closed_tree_icon = ''
+autocmd BufEnter * if (winnr("$") == 1 && exists("b:defx")) | q | endif
 
 " ale
 let g:ale_sign_column_always = 1
