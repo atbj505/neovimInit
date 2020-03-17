@@ -202,6 +202,8 @@ nnoremap <silent> <space>cf  :<C-u>CocList files<cr>
 
 nnoremap <silent> <space>cb  :<C-u>CocList buffers<cr>
 
+nnoremap <silent> <space>cg  :<C-u>CocList grep<cr>
+
 " Use <C-l> for trigger snippet expand.
 imap <C-l> <Plug>(coc-snippets-expand)
 

@@ -14,7 +14,6 @@ Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'kristijanhusak/defx-icons'
 Plug 'kristijanhusak/defx-git'
 Plug 'w0rp/ale'
-Plug 'Raimondi/delimitMate'
 Plug 'easymotion/vim-easymotion'
 Plug 'yonchu/accelerated-smooth-scroll'
 Plug 'Yggdroot/indentLine'
