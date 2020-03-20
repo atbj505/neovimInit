@@ -33,5 +33,6 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'honza/vim-snippets'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-commentary'
+Plug 'mhinz/vim-startify'
 
 call plug#end()
