@@ -1,8 +1,8 @@
 {
-    "diagnostic.displayByAle": true,
+    "rust-analyzer.serverPath":"/Volumes/Transcend/GitHub/rust-analyzer/target/release/rust-analyzer",
     "languageserver": {
         "rust": {
-          "command": "ra_lsp_server",
+          "command": "rust-analyzer",
           "filetypes": ["rust"],
           "rootPatterns": ["Cargo.toml"]
         },

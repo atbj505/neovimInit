@@ -93,40 +93,9 @@ let g:choosewin_tablabel = ''
 " undoTree
 let g:undotree_SetFocusWhenToggle = 1
 
-" vim-auto-save
-let g:auto_save = 1
-let g:auto_save_events = ["InsertLeave"]
-
 " vimwiki
 let g:vimwiki_list = [{'path': '/Volumes/Transcend/vimwiki/'}]
 
 " indentLine
 let g:indentLine_char='┆'
 let g:indentLine_enabled = 1
-
-" ctrlp
-let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\v[\/]\.(git|hg|svn|rvm)$',
-    \ 'file': '\v\.(exe|so|dll|zip|tar|tar.gz|pyc)$',
-    \ }
-let g:ctrlp_working_path_mode=0
-let g:ctrlp_match_window_bottom=1
-let g:ctrlp_max_height=15
-let g:ctrlp_match_window_reversed=0
-let g:ctrlp_mruf_max=500
-let g:ctrlp_follow_symlinks=1
-let g:ctrlp_funky_syntax_highlight = 1
-let g:ctrlp_funky_matchtype = 'path'
-let g:ctrlp_extensions = ['funky']
-" 替换grep为ag
-if executable('ag')
-  " Use Ag over Grep
-  set grepprg=ag\ --nogroup\ --nocolor
-  " Use ag in CtrlP for listing files.
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-  " Ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
-endif
-
-" fzf
-set rtp+=/usr/local/opt/fzf

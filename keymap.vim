@@ -14,12 +14,6 @@ map <Right> <Nop>
 map <Up> <Nop>
 map <Down> <Nop>
 
-" command
-imap <C-k> <Up>
-imap <C-j> <Down>
-imap <C-l> <Right>
-imap <C-h> <Left>
-
 " Plug
 nnoremap <Leader>pi :PlugInstall<Cr>
 nnoremap <Leader>pc :PlugClean<Cr>
@@ -33,12 +27,6 @@ nnoremap <leader>- :sp<CR>
 map gn :bn<CR>
 map gp :bp<CR>
 nnoremap gs :bp<cr>:bd #<cr>
-
-" Ale
-nmap <Leader>s :ALEToggle<CR>
-nmap <Leader>d :ALEDetail<CR>
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 " JSON
 nmap <leader>jt <Esc>:%!python -m json.tool<CR><Esc>:set filetype=json<CR>
@@ -68,7 +56,6 @@ function! s:defx_toggle_tree() abort
     endif
     return defx#do_action('multi', ['drop'])
 endfunction
-
 
 " undotree
 nnoremap <Leader>ut :UndotreeToggle<cr>

@@ -28,7 +28,6 @@ Plug 'mbbill/undotree'
 Plug 'benmills/vimux'
 Plug 'jtdowney/vimux-cargo'
 Plug 'benmills/vimux-golang'
-Plug '907th/vim-auto-save'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'liuchengxu/vim-which-key'
 Plug 'honza/vim-snippets'
