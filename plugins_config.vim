@@ -8,6 +8,7 @@ let g:airline_right_sep = '◀'
 let g:airline_right_alt_sep = '❮'
 let g:airline_theme="onedark"
 let g:airline_solarized_bg='dark'
+let g:airline_powerline_fonts = 1
 let g:airline#extensions#bufferline#enabled = 1
 let g:bufferline_echo = 1
 let g:bufferline_modified = '+'
@@ -20,7 +21,21 @@ let airline#extensions#ale#error_symbol = 'E:'
 let airline#extensions#ale#warning_symbol = 'W:'
 
 " defx
+function! Root(path) abort
+    return fnamemodify(a:path, ':t')
+endfunction
+
+call defx#custom#source('file', {
+        \ 'root': 'Root',
+        \})
+
+call defx#custom#column('mark', {
+        \ 'readonly_icon': '✗',
+        \ 'selected_icon': '✓',
+        \ })
+
 call defx#custom#option('_', {
+      \ 'columns': 'indent:git:icons:filename',
       \ 'winwidth': 30,
       \ 'split': 'vertical',
       \ 'direction': 'topleft',
@@ -28,10 +43,6 @@ call defx#custom#option('_', {
       \ 'buffer_name': '',
       \ 'toggle': 1,
       \ 'resume': 1
-      \ })
-
-call defx#custom#column('indent', {
-      \ 'indent': '-'
       \ })
 
 let g:defx_icons_enable_syntax_highlight = 1
@@ -46,6 +57,15 @@ let g:defx_icons_root_opened_tree_icon = ''
 let g:defx_icons_nested_opened_tree_icon = ''
 let g:defx_icons_nested_closed_tree_icon = ''
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:defx")) | q | endif
+let g:defx_git#indicators = {
+		\ 'Modified'  : '+',
+		\ 'Staged'    : '●',
+		\ 'Untracked' : '?',
+		\ 'Renamed'   : '➜',
+		\ 'Unmerged'  : '═',
+		\ 'Deleted'   : 'x',
+		\ 'Unknown'   : '?'
+		\ }
 
 " ale
 let g:ale_sign_column_always = 1

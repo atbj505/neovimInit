@@ -39,7 +39,8 @@ nmap ga <Plug>(EasyAlign)
 nmap - <Plug>(choosewin)
 
 " DeFx
-nmap <silent> <Leader>df :Defx -columns=icons:indent:filename:type <cr>
+" nmap <silent> <Leader>df :Defx -columns=icons:indent:filename:type <cr>
+nmap <silent> <Leader>df :<C-u>Defx -listed -resume -buffer-name=tab`tabpagenr()` <cr>
 autocmd FileType defx call s:defx_mappings()
 function! s:defx_mappings() abort
     nnoremap <silent><buffer><expr> o     <SID>defx_toggle_tree()                    " 打开或者关闭文件夹，文件
@@ -47,6 +48,8 @@ function! s:defx_mappings() abort
     nnoremap <silent><buffer><expr> <C-r>  defx#do_action('redraw')
     nnoremap <silent><buffer><expr> F defx#do_action('new_file')
     nnoremap <silent><buffer><expr> D defx#do_action('remove')
+    nnoremap <silent><buffer><expr> E defx#do_action('open', 'vsplit')
+    nnoremap <silent><buffer><expr> q defx#do_action('quit')
 endfunction
 
 function! s:defx_toggle_tree() abort

@@ -11,6 +11,7 @@ set novisualbell
 set noerrorbells
 set ffs=unix,dos,mac
 set encoding=utf8
+set guifont=JetBrainsMono_Nerd_Font:h13
 set nofoldenable
 set nocompatible
 set timeoutlen=500
