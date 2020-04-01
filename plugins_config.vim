@@ -101,10 +101,6 @@ if (has("termguicolors"))
 set termguicolors
 endif
 
-let g:lightline = {
-  \ 'colorscheme': 'onedark',
-  \ }
-
 " vim-choosewin
 let g:choosewin_label = '123456789'
 let g:choosewin_tablabel = ''
@@ -115,6 +111,5 @@ let g:undotree_SetFocusWhenToggle = 1
 " vimwiki
 let g:vimwiki_list = [{'path': '/Volumes/Transcend/vimwiki/'}]
 
-" indentLine
-let g:indentLine_char='┆'
-let g:indentLine_enabled = 1
+" vim-sneak
+let g:sneak#label = 1
