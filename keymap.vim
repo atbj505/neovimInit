@@ -33,28 +33,6 @@ nmap ga <Plug>(EasyAlign)
 " vim-choosewin
 nmap - <Plug>(choosewin)
 
-" DeFx
-" nmap <silent> <Leader>df :Defx -columns=icons:indent:filename:type <cr>
-nmap <silent> <Leader>df :<C-u>Defx -listed -resume -buffer-name=tab`tabpagenr()` <cr>
-autocmd FileType defx call s:defx_mappings()
-function! s:defx_mappings() abort
-    nnoremap <silent><buffer><expr> o     <SID>defx_toggle_tree()                    " 打开或者关闭文件夹，文件
-    nnoremap <silent><buffer><expr> .     defx#do_action('toggle_ignored_files')     " 显示隐藏文件
-    nnoremap <silent><buffer><expr> <C-r>  defx#do_action('redraw')
-    nnoremap <silent><buffer><expr> F defx#do_action('new_file')
-    nnoremap <silent><buffer><expr> D defx#do_action('remove')
-    nnoremap <silent><buffer><expr> E defx#do_action('open', 'vsplit')
-    nnoremap <silent><buffer><expr> q defx#do_action('quit')
-endfunction
-
-function! s:defx_toggle_tree() abort
-    " Open current file, or toggle directory expand/collapse
-    if defx#is_directory()
-        return defx#do_action('open_or_close_tree')
-    endif
-    return defx#do_action('multi', ['drop'])
-endfunction
-
 " undotree
 nnoremap <Leader>ut :UndotreeToggle<cr>
 
@@ -215,3 +193,10 @@ endfunction
 
 " Keymapping for grep word under cursor with interactive mode
 nnoremap <silent> <Leader>cu :exe 'CocList -I --input='.expand('<cword>').' grep'<CR>
+
+" Use preset argument to open it
+nmap <space>ed :CocCommand explorer --preset .vim<CR>
+nmap <space>ef :CocCommand explorer --preset floating<CR>
+
+" List all presets
+nmap <space>el :CocList explPresets

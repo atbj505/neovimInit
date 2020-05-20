@@ -19,53 +19,6 @@ let g:airline#extensions#ale#enabled = 1
 let airline#extensions#ale#error_symbol = 'E:'
 let airline#extensions#ale#warning_symbol = 'W:'
 
-" defx
-function! Root(path) abort
-    return fnamemodify(a:path, ':t')
-endfunction
-
-call defx#custom#source('file', {
-        \ 'root': 'Root',
-        \})
-
-call defx#custom#column('mark', {
-        \ 'readonly_icon': '✗',
-        \ 'selected_icon': '✓',
-        \ })
-
-call defx#custom#option('_', {
-      \ 'columns': 'indent:git:icons:filename',
-      \ 'winwidth': 30,
-      \ 'split': 'vertical',
-      \ 'direction': 'topleft',
-      \ 'show_ignored_files': 0,
-      \ 'buffer_name': '',
-      \ 'toggle': 1,
-      \ 'resume': 1
-      \ })
-
-let g:defx_icons_enable_syntax_highlight = 1
-let g:defx_icons_column_length = 2
-let g:defx_icons_directory_icon = ''
-let g:defx_icons_mark_icon = '*'
-let g:defx_icons_parent_icon = ''
-let g:defx_icons_default_icon = ''
-let g:defx_icons_directory_symlink_icon = ''
-" Options below are applicable only when using "tree" feature
-let g:defx_icons_root_opened_tree_icon = ''
-let g:defx_icons_nested_opened_tree_icon = ''
-let g:defx_icons_nested_closed_tree_icon = ''
-autocmd BufEnter * if (winnr("$") == 1 && exists("b:defx")) | q | endif
-let g:defx_git#indicators = {
-		\ 'Modified'  : '+',
-		\ 'Staged'    : '●',
-		\ 'Untracked' : '?',
-		\ 'Renamed'   : '➜',
-		\ 'Unmerged'  : '═',
-		\ 'Deleted'   : 'x',
-		\ 'Unknown'   : '?'
-		\ }
-
 " ale
 let g:ale_sign_column_always = 1
 let g:ale_sign_error = 'X'
@@ -113,3 +66,25 @@ let g:vimwiki_list = [{'path': '/Volumes/Transcend/vimwiki/'}]
 
 " vim-sneak
 let g:sneak#label = 1
+
+" coc-explorer
+let g:coc_explorer_global_presets = {
+\   '.vim': {
+\   },
+\   'floating': {
+\      'position': 'floating',
+\   },
+\   'floatingLeftside': {
+\      'position': 'floating',
+\      'floating-position': 'left-center',
+\      'floating-width': 50,
+\   },
+\   'floatingRightside': {
+\      'position': 'floating',
+\      'floating-position': 'left-center',
+\      'floating-width': 50,
+\   },
+\   'simplify': {
+\     'file.child.template': '[selection | clip | 1] [indent][icon | 1] [filename omitCenter 1]'
+\   }
+\ }

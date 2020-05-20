@@ -6,5 +6,6 @@
           "filetypes": ["rust"],
           "rootPatterns": ["Cargo.toml"]
         }
-    }
+    },
+    "explorer.icon.enableNerdfont": true
 }
