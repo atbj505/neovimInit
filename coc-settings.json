@@ -1,11 +1,14 @@
 {
-    "rust-analyzer.serverPath":"/Volumes/Transcend/GitHub/rust-analyzer/target/release/rust-analyzer",
+    "explorer.icon.enableNerdfont": true,
+    "diagnostic.displayByAle":true,
     "languageserver": {
-        "rust": {
-          "command": "rust-analyzer",
-          "filetypes": ["rust"],
-          "rootPatterns": ["Cargo.toml"]
-        }
-    },
-    "explorer.icon.enableNerdfont": true
+        "golang": {
+          "command": "~/go/bin/gopls",
+          "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+          "filetypes": ["go"],
+          "initializationOptions": {
+            "usePlaceholders": true
+          }
+    }
+  }
 }

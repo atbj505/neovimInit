@@ -30,6 +30,7 @@ let g:ale_python_flake8_executable = 'python3'
 let g:ale_python_flake8_options = '-m flake8'
 let g:ale_python_flake8_use_global = 1
 let g:ale_linters = {'python': ['flake8'], 'rust': ['cargo'], 'go': ['gopls']}
+let g:ale_go_gopls_executable = '~/go/bin/gopls'
 let g:ale_rust_cargo_use_clippy = 1
 let g:ale_rust_rustc_options = '--emit metadata'
 let g:ale_go_gometalinter_options = '--fast --enable=staticcheck --enable=gosimple --enable=unused'
@@ -37,6 +38,7 @@ let g:ale_fix_on_save = 1
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'rust': ['rustfmt'],
+\   'go' : ['gofmt', 'goimports'],
 \}
 
 " indentLine
@@ -60,9 +62,6 @@ let g:choosewin_tablabel = ''
 
 " undoTree
 let g:undotree_SetFocusWhenToggle = 1
-
-" vimwiki
-let g:vimwiki_list = [{'path': '/Volumes/Transcend/vimwiki/'}]
 
 " vim-sneak
 let g:sneak#label = 1

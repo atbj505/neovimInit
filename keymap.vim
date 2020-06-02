@@ -36,20 +36,6 @@ nmap - <Plug>(choosewin)
 " undotree
 nnoremap <Leader>ut :UndotreeToggle<cr>
 
-" vimux
-map <Leader>vp :VimuxPromptCommand<CR>
-map <Leader>vl :VimuxRunLastCommand<CR>
-
-" vimux-cargo
-map <Leader>crc :wa<CR> :CargoRun<CR>
-map <Leader>cra :wa<CR> :CargoTestAll<CR>
-map <Leader>crb :wa<CR> :CargoUnitTestCurrentFile<CR>
-map <Leader>crf :wa<CR> :CargoUnitTestFocused<CR>
-
-" vimux-golang
-map <Leader>gra :wa<CR> :GolangTestCurrentPackage<CR>
-map <Leader>grf :wa<CR> :GolangTestFocused<CR>
-
 " coc
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
