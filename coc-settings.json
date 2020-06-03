@@ -3,7 +3,7 @@
     "diagnostic.displayByAle":true,
     "languageserver": {
         "golang": {
-          "command": "~/go/bin/gopls",
+          "command": "gopls",
           "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
           "filetypes": ["go"],
           "initializationOptions": {

@@ -2,17 +2,13 @@
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
-let g:airline_left_sep = '▶'
-let g:airline_left_alt_sep = '❯'
-let g:airline_right_sep = '◀'
-let g:airline_right_alt_sep = '❮'
+let g:airline_left_sep = ' '
+let g:airline_left_alt_sep = '|'
+let g:airline_right_sep = ' '
+let g:airline_right_alt_sep = '|'
 let g:airline_theme="onedark"
 let g:airline_solarized_bg='dark'
-let g:airline_powerline_fonts = 1
 let g:airline#extensions#bufferline#enabled = 1
-let g:bufferline_echo = 0
-" let g:bufferline_modified = '+'
-" let g:bufferline_show_bufnr = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#branch#empty_message = ''
 let g:airline#extensions#ale#enabled = 1
@@ -30,7 +26,6 @@ let g:ale_python_flake8_executable = 'python3'
 let g:ale_python_flake8_options = '-m flake8'
 let g:ale_python_flake8_use_global = 1
 let g:ale_linters = {'python': ['flake8'], 'rust': ['cargo'], 'go': ['gopls']}
-let g:ale_go_gopls_executable = '~/go/bin/gopls'
 let g:ale_rust_cargo_use_clippy = 1
 let g:ale_rust_rustc_options = '--emit metadata'
 let g:ale_go_gometalinter_options = '--fast --enable=staticcheck --enable=gosimple --enable=unused'
