@@ -16,13 +16,14 @@ Plug 'justinmk/vim-sneak'
 Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-apathy'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-rsi'
 Plug 'junegunn/vim-easy-align'
 Plug 't9md/vim-choosewin'
 Plug 'mbbill/undotree'
 Plug 'liuchengxu/vim-which-key'
 Plug 'honza/vim-snippets'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'tpope/vim-commentary'
 Plug 'mhinz/vim-startify'
 
 call plug#end()
