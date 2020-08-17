@@ -11,30 +11,6 @@ let g:airline_solarized_bg='dark'
 let g:airline#extensions#bufferline#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#branch#empty_message = ''
-let g:airline#extensions#ale#enabled = 1
-let airline#extensions#ale#error_symbol = 'E:'
-let airline#extensions#ale#warning_symbol = 'W:'
-
-" ale
-let g:ale_sign_column_always = 1
-let g:ale_sign_error = 'X'
-let g:ale_sign_warning = '!'
-let g:ale_echo_msg_error_str = 'E'
-let g:ale_echo_msg_warning_str = 'W'
-let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-let g:ale_python_flake8_executable = 'python3'
-let g:ale_python_flake8_options = '-m flake8'
-let g:ale_python_flake8_use_global = 1
-let g:ale_linters = {'python': ['flake8'], 'rust': ['cargo'], 'go': ['gopls']}
-let g:ale_rust_cargo_use_clippy = 1
-let g:ale_rust_rustc_options = '--emit metadata'
-let g:ale_go_gometalinter_options = '--fast --enable=staticcheck --enable=gosimple --enable=unused'
-let g:ale_fix_on_save = 1
-let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'rust': ['rustfmt'],
-\   'go' : ['gofmt', 'goimports'],
-\}
 
 " indentLine
 let g:indentLine_char='┆'
@@ -62,6 +38,10 @@ let g:undotree_SetFocusWhenToggle = 1
 let g:sneak#label = 1
 
 " coc-explorer
+highlight CocWarnSign guibg=#282c34 guifg=#e5c07b
+highlight CocInfoSign guibg=#282c34 guifg=#98c379
+highlight CocErrorSign guibg=#282c34 guifg=#e06c75
+highlight CocHintSign guibg=#282c34 guifg=#61afef
 let g:coc_explorer_global_presets = {
 \   '.vim': {
 \   },

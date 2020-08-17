@@ -1,13 +1,18 @@
 {
     "explorer.icon.enableNerdfont": true,
-    "diagnostic.displayByAle":true,
+    "diagnostic.format": "%message [%source]",
+    "diagnostic.checkCurrentLine": true,
+    "diagnostic.separateRelatedInformationAsDiagnostics": true,
     "languageserver": {
         "golang": {
           "command": "gopls",
           "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
           "filetypes": ["go"],
           "initializationOptions": {
-            "usePlaceholders": true
+            "staticcheck": true,
+            "usePlaceholders": true,
+            "completeUnimported": true,
+            "caseSensitiveCompletion": true
           }
     }
   }
