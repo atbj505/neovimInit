@@ -6,8 +6,7 @@ endif
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'joshdick/onedark.vim'
+Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'sheerun/vim-polyglot'
 Plug 'yonchu/accelerated-smooth-scroll'
 Plug 'justinmk/vim-sneak'

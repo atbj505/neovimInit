@@ -1,11 +1,11 @@
 " NeoVim
-set background=dark
-colorscheme onedark
+colorscheme onehalflight
 set splitbelow
 set splitright
 let python_highlight_all=1
 syntax on
 set mouse-=a
+set t_Co=256
 set cursorline
 set novisualbell
 set noerrorbells
@@ -84,3 +84,10 @@ function HeaderBash()
     normal o
 endf
 autocmd bufnewfile *.sh call HeaderBash()
+
+" true color
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif

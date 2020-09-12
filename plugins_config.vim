@@ -6,8 +6,7 @@ let g:airline_left_sep = ' '
 let g:airline_left_alt_sep = '|'
 let g:airline_right_sep = ' '
 let g:airline_right_alt_sep = '|'
-let g:airline_theme="onedark"
-let g:airline_solarized_bg='dark'
+let g:airline_theme="onehalflight"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
@@ -47,10 +46,10 @@ let g:undotree_SetFocusWhenToggle = 1
 let g:sneak#label = 1
 
 " coc-explorer
-highlight CocWarnSign guibg=#282c34 guifg=#e5c07b
-highlight CocInfoSign guibg=#282c34 guifg=#98c379
-highlight CocErrorSign guibg=#282c34 guifg=#e06c75
-highlight CocHintSign guibg=#282c34 guifg=#61afef
+highlight CocWarnSign guibg=#383a42 guifg=#c18401
+highlight CocInfoSign guibg=#383a42 guifg=#50a14f
+highlight CocErrorSign guibg=#383a42 guifg=#e45649
+highlight CocHintSign guibg=#383a42 guifg=#0184bc
 autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
 let g:coc_explorer_global_presets = {
 \   '.vim': {
