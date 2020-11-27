@@ -19,8 +19,9 @@ Plug 'junegunn/vim-easy-align'
 Plug 't9md/vim-choosewin'
 Plug 'mbbill/undotree'
 Plug 'liuchengxu/vim-which-key'
-Plug 'honza/vim-snippets'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mhinz/vim-startify'
+Plug 'sebdah/vim-delve'
+Plug 'honza/vim-snippets'
 
 call plug#end()
