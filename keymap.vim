@@ -15,7 +15,7 @@ nnoremap <Leader>pc :PlugClean<Cr>
 nnoremap <Leader>pu :PlugUpdate<Cr>
 
 " Split fast
-nnoremap <leader>\ :vs<CR>
+nnoremap <leader>_ :vs<CR>
 nnoremap <leader>- :sp<CR>
 
 " Vim-airline

@@ -23,5 +23,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mhinz/vim-startify'
 Plug 'sebdah/vim-delve'
 Plug 'honza/vim-snippets'
+Plug 'mg979/vim-visual-multi'
 
 call plug#end()
