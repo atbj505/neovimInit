@@ -24,5 +24,6 @@ Plug 'mhinz/vim-startify'
 Plug 'sebdah/vim-delve'
 Plug 'honza/vim-snippets'
 Plug 'mg979/vim-visual-multi'
+Plug 'TaDaa/vimade'
 
 call plug#end()
