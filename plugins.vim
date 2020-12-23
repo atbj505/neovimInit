@@ -8,8 +8,8 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'sheerun/vim-polyglot'
-Plug 'yonchu/accelerated-smooth-scroll'
 Plug 'justinmk/vim-sneak'
+Plug 'psliwka/vim-smoothie'
 Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-apathy'
 Plug 'tpope/vim-surround'
