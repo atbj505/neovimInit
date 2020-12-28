@@ -163,27 +163,27 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Using CocList
 " Show all diagnostics
-nnoremap <silent> <space>ca  :<C-u>CocList diagnostics<cr>
+nnoremap <silent> <leader>ca  :<C-u>CocList diagnostics<cr>
 " Manage extensions
-nnoremap <silent> <space>ce  :<C-u>CocList extensions<cr>
+nnoremap <silent> <leader>ce  :<C-u>CocList extensions<cr>
 " Show commands
-nnoremap <silent> <space>cc  :<C-u>CocList commands<cr>
+nnoremap <silent> <leader>cc  :<C-u>CocList commands<cr>
 " Find symbol of current document
-nnoremap <silent> <space>co  :<C-u>CocList outline<cr>
+nnoremap <silent> <leader>co  :<C-u>CocList outline<cr>
 " Search workspace symbols
-nnoremap <silent> <space>cs  :<C-u>CocList -I symbols<cr>
+nnoremap <silent> <leader>cs  :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
-nnoremap <silent> <space>cj  :<C-u>CocNext<CR>
+nnoremap <silent> <leader>cj  :<C-u>CocNext<CR>
 " Do default action for previous item.
-nnoremap <silent> <space>ck  :<C-u>CocPrev<CR>
+nnoremap <silent> <leader>ck  :<C-u>CocPrev<CR>
 " Resume latest coc list
-nnoremap <silent> <space>cp  :<C-u>CocListResume<CR>
+nnoremap <silent> <leader>cp  :<C-u>CocListResume<CR>
 
-nnoremap <silent> <space>cf  :<C-u>CocList files<cr>
+nnoremap <silent> <leader>cf  :<C-u>CocList files<cr>
 
-nnoremap <silent> <space>cb  :<C-u>CocList buffers<cr>
+nnoremap <silent> <leader>cb  :<C-u>CocList buffers<cr>
 
-nnoremap <silent> <space>cg  :<C-u>CocList grep<cr>
+nnoremap <silent> <leader>cg  :<C-u>CocList grep<cr>
 
 " Use <C-l> for trigger snippet expand.
 imap <C-l> <Plug>(coc-snippets-expand)
@@ -216,8 +216,15 @@ endfunction
 nnoremap <silent> <Leader>cu :exe 'CocList -I --input='.expand('<cword>').' grep'<CR>
 
 " Use preset argument to open it
-nmap <space>ed :CocCommand explorer --preset .vim<CR>
-nmap <space>ef :CocCommand explorer --preset floating<CR>
+nmap <leader>ed :CocCommand explorer --preset .vim<CR>
+nmap <leader>ef :CocCommand explorer --preset floating<CR>
 
 " List all presets
-nmap <space>el :CocList explPresets
+nmap <leader>el :CocList explPresets
+
+" bookmark
+nmap <leader>bt :CocCommand bookmark.toggle<CR>
+
+" floaterm
+let g:floaterm_keymap_new = '<Leader>fn'
+let g:floaterm_keymap_toggle = '<Leader>ft'

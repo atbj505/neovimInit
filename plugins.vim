@@ -25,5 +25,6 @@ Plug 'sebdah/vim-delve'
 Plug 'honza/vim-snippets'
 Plug 'mg979/vim-visual-multi'
 Plug 'TaDaa/vimade'
+Plug 'voldikss/vim-floaterm'
 
 call plug#end()
