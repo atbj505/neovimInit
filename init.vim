@@ -15,11 +15,11 @@ if dein#load_state('~/.cache/dein')
   call dein#add('tpope/vim-surround')
   call dein#add('tpope/vim-commentary')
   call dein#add('tpope/vim-rsi')
-  call dein#add('junegunn/vim-easy-align', {'on_cmd': 'EasyAlign'})
-  call dein#add('t9md/vim-choosewin', {'on_cmd': 'ChooseWin'})
+  call dein#add('junegunn/vim-easy-align')
+  call dein#add('t9md/vim-choosewin')
   call dein#add('mbbill/undotree', {'on_cmd': 'UndotreeToggle'})
   call dein#add('liuchengxu/vim-which-key')
-  call dein#add('neoclide/coc.nvim', {'rev': 'release'})
+  call dein#add('neoclide/coc.nvim', {'merged': 0})
   call dein#add('mhinz/vim-startify')
   call dein#add('sebdah/vim-delve', {'on_ft': ['go']})
   call dein#add('honza/vim-snippets')
@@ -416,9 +416,6 @@ nmap <leader>ef :CocCommand explorer --preset floating<CR>
 
 " List all presets
 nmap <leader>el :CocList explPresets
-
-" bookmark
-nmap <leader>bt :CocCommand bookmark.toggle<CR>
 
 " floaterm
 let g:floaterm_keymap_new = '<Leader>fn'
