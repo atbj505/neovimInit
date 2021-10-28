@@ -26,6 +26,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('mg979/vim-visual-multi')
   call dein#add('TaDaa/vimade')
   call dein#add('voldikss/vim-floaterm', {'on_cmd': 'FloatermToggle'})
+  call dein#add('itchyny/vim-cursorword')
 
   call dein#end()
   call dein#save_state()
@@ -167,6 +168,7 @@ let g:undotree_SetFocusWhenToggle = 1
 
 " vim-sneak
 let g:sneak#label = 1
+highlight Sneak guibg=#383a42 guifg=#e45649
 
 " coc-explorer
 highlight CocWarnSign guibg=#383a42 guifg=#c18401
