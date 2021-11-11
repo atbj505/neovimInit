@@ -27,6 +27,8 @@ if dein#load_state('~/.cache/dein')
   call dein#add('TaDaa/vimade')
   call dein#add('voldikss/vim-floaterm', {'on_cmd': 'FloatermToggle'})
   call dein#add('itchyny/vim-cursorword')
+  call dein#add('github/copilot.vim')
+  call dein#add('pechorin/any-jump.vim')
 
   call dein#end()
   call dein#save_state()
