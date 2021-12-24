@@ -177,7 +177,7 @@ highlight CocWarnSign guibg=#383a42 guifg=#c18401
 highlight CocInfoSign guibg=#383a42 guifg=#50a14f
 highlight CocErrorSign guibg=#383a42 guifg=#e45649
 highlight CocHintSign guibg=#383a42 guifg=#0184bc
-autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
+" autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
 let g:coc_explorer_global_presets = {
 \   '.vim': {
 \   },
